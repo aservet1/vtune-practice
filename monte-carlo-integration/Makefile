@@ -1,7 +1,9 @@
 target = integrate
 
+flags = -g -Wall -Wextra -pedantic
+
 all:
-	gcc -g $(target).c -o $(target) -lpthread -lm
+	gcc $(flags) $(target).c -o $(target) -lpthread -lm
 
 clean:
 	rm -f $(target)
