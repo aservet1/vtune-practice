@@ -9,9 +9,10 @@ a=$1; b=$2; n=$3; outfile=$4
 
 echo "n_threads,time" > $outfile
 
-for n_threads in {1..40}
-do
+# for n_threads in {1..40}; do
+for n_threads in {1..8}; do
 	./integrate $a $b $n $n_threads $outfile
 done
 
 ./plot.py $outfile $(echo $outfile | sed 's/\..*$//')
+

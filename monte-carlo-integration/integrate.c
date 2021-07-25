@@ -1,8 +1,12 @@
-#include <iostream>
+#include <stdio.h>
+#include <math.h>
+#include <time.h>
+#include <stdlib.h>
 #include <pthread.h>
-#include <cmath>
-#include <ctime>
-#include <chrono>
+#include <sys/time.h>
+
+#define tv_to_usec(tv) \
+	(tv.tv_sec * 1000000 + tv.tv_usec)
 
 static float* sum_buffer;
 
@@ -86,27 +90,33 @@ integrate_nothread(float a, float b, int n) {
 int
 main(int argc, char *argv[]) {
 	if (argc != 5 && argc != 6) {
-		std::cerr << "usage: " << argv[0] << " a b n n_threads [time data filename]" << std::endl;
-		std::cerr << "  note that if you use an outfile, you're appending to it, not over-writing" << std::endl;
+		printf("usage: %s a b n n_threads [time data filename]\n", argv[0]);
+		printf("  note that if you use an outfile, you're appending to it, not over-writing");
 		exit(2);
 	}
-	float a = std::stod(argv[1]);
-	float b = std::stod(argv[2]);
-	int n = std::stod(argv[3]);
-	int n_threads = std::stod(argv[4]);
-	char* filename = (argc == 6) ? argv[5] : NULL;
+
+	float a         =  strtof(argv[1], NULL);
+	float b         =  strtof(argv[2], NULL);
+	int   n         =  strtof(argv[3], NULL);
+	int   n_threads =  strtof(argv[4], NULL);
+	char* filename  =  (argc == 6) ? argv[5] : NULL;
+
 	pthread_t tids[n_threads];
 
-	auto start = std::chrono::high_resolution_clock::now();
-	float integral = integrate(a,b,n,n_threads,tids);
-	std::chrono::duration<double> elapsed = std::chrono::system_clock::now() - start;
+	struct timeval start, end;
+	gettimeofday(&start, NULL);
+	float integral = integrate (
+		a, b, n,
+		n_threads, tids
+	);
+	gettimeofday(&start, NULL);
+	long time = tv_to_usec(end) - tv_to_usec(start);
 
-	std::cout << integral << std::endl;
-	
-	double time = elapsed.count();
+	printf("%f\n", integral);
+
 	if (filename) {
 		FILE* out = fopen(filename, "a");
-		fprintf(out, "%d,%f\n", n_threads, time);
+		fprintf(out, "%d,%ld\n", n_threads, time);
 		fclose(out);
 	}
 	

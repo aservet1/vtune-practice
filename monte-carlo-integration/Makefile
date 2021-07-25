@@ -1,8 +1,7 @@
-
 target = integrate
 
 all:
-	g++ -g $(target).cpp -o $(target) -lpthread
+	gcc -g $(target).c -o $(target) -lpthread -lm
 
 clean:
 	rm -f $(target)
