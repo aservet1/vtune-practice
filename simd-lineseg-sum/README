@@ -1,0 +1,20 @@
+Build with 'make', run with './main [sequential|parallel]'.
+
+All data (2-50 dimensions) is written to file out.json. You can view it raw with
+'cat out.json | json_pp' or you can run 'python3 surface-plot.py out.json' to
+generate and display an interactive 3-D surface plot. Although the surface plot's
+'dimension' label starts at 0, it only starts plotting at 2. You can drag the plot
+around to look at it from different angles, seeing that the distances are way more
+distributed for 2 dimensions and almost entirely at the surface for 50 dimensions.
+
+Note that the python script just generates a plot, but doesn't save it. You have
+to re-run the script if you wanna see the image again after closing it.
+
+Node that I did the Muller method for random sampling of the unit sphere.
+See Maetehod 20 of this article for python code for the algorithm that
+I translated to C++.
+
+http://extremelearning.com.au/how-to-generate-uniformly-random-points-on-n-spheres-and-n-balls/
+
+I'm generating 1,000,000 points. On remote.cs, it took 45 sec parallel and 166 sec sequential,
+according to gettimeofday(). Time is printed after you run each version.

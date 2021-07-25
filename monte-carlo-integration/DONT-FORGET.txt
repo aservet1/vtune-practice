@@ -1,0 +1,2 @@
+there's a bug where you get the wrong answer when a is negative and b is positive
+the bug where you need at least 3 threads to get an accurate result, but only when using a really large sample number

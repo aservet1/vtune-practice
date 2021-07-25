@@ -1,0 +1,2 @@
+make sure the output is all there and that you didn't comment out any tiny things
+'make clean' all to check for warnings

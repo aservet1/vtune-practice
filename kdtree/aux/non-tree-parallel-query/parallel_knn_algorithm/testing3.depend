@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1401035645 source:c:\users\yahya\documents\testing3\main.cpp
+	<iostream>
+	<cmath>
+	<fstream>
+	<omp.h>
+	<ctime>
+	<stdlib.h>
+

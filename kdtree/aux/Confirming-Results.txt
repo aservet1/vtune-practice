@@ -1,0 +1,71 @@
+Data and results for the {data,query}_simplest.dat files.
+
+DataSet Points:
+---------------
+    Point 0:     -370.365173,     -562.309082
+    Point 1:      517.020508,       99.060356
+    Point 2:      224.789612,      196.642136
+    Point 3:      138.558609,      705.056702
+    Point 4:     -637.536987,     -319.891449
+    Point 5:       56.458549,      875.151062
+    Point 6:     -293.294525,      850.190063
+    Point 7:     -189.954636,      548.072205
+    Point 8:     -403.789642,      529.884094
+    Point 9:     -891.773010,      -50.271629
+    Point 10:      609.092163,      604.213318
+    Point 11:       12.244692,      259.676636
+    Point 12:      -98.721664,      778.417847
+    Point 13:     -162.107697,      829.085815
+    Point 14:     -169.265976,      936.697937
+
+Query Points and Results:
+-------------------------
+    Query 0:      736.539185,      204.290710
+    Neighbor 0 for query 0:      517.020508,       99.060356
+    Neighbor 1 for query 0:      609.092163,      604.213318
+    Neighbor 2 for query 0:      224.789612,      196.642136
+
+    Query 1:     -245.919968,     -215.157166
+    Neighbor 0 for query 1:     -370.365173,     -562.309082
+    Neighbor 1 for query 1:     -637.536987,     -319.891449
+    Neighbor 2 for query 1:     -891.773010,      -50.271629
+
+    Query 2:      622.660645,      -66.445229
+    Neighbor 0 for query 2:      517.020508,       99.060356
+    Neighbor 1 for query 2:      224.789612,      196.642136
+    Neighbor 2 for query 2:      609.092163,      604.213318
+
+    Query 3:      -56.860012,      576.329468
+    Neighbor 0 for query 3:     -189.954636,      548.072205
+    Neighbor 1 for query 3:      -98.721664,      778.417847
+    Neighbor 2 for query 3:      138.558609,      705.056702
+
+    Query 4:      465.844543,     -689.568848
+    Neighbor 0 for query 4:      517.020508,       99.060356
+    Neighbor 1 for query 4:     -370.365173,     -562.309082
+    Neighbor 2 for query 4:      224.789612,      196.642136
+
+    Query 5:     -803.055176,     -511.936829
+    Neighbor 0 for query 5:     -637.536987,     -319.891449
+    Neighbor 1 for query 5:     -370.365173,     -562.309082
+    Neighbor 2 for query 5:     -891.773010,      -50.271629
+
+    Query 6:      460.086029,      664.241577
+    Neighbor 0 for query 6:      609.092163,      604.213318
+    Neighbor 1 for query 6:      138.558609,      705.056702
+    Neighbor 2 for query 6:       56.458549,      875.151062
+
+    Query 7:     -919.868896,      610.661438
+    Neighbor 0 for query 7:     -403.789642,      529.884094
+    Neighbor 1 for query 7:     -891.773010,      -50.271629
+    Neighbor 2 for query 7:     -293.294525,      850.190063
+
+    Query 8:     -370.119720,     -745.367554
+    Neighbor 0 for query 8:     -370.365173,     -562.309082
+    Neighbor 1 for query 8:     -637.536987,     -319.891449
+    Neighbor 2 for query 8:     -891.773010,      -50.271629
+
+    Query 9:     -488.319580,     -633.463440
+    Neighbor 0 for query 9:     -370.365173,     -562.309082
+    Neighbor 1 for query 9:     -637.536987,     -319.891449
+    Neighbor 2 for query 9:     -891.773010,      -50.271629

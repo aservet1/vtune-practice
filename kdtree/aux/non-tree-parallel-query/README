@@ -1,0 +1,4 @@
+From what I've gathered this just does k-nn on an array with parallel for loops in openmp. Probably
+not useful, but might be worth keeping around
+
+https://www.researchgate.net/post/How-to-parallelise-k-nearest-neighbor-KNN-algorithm
