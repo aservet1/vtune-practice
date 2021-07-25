@@ -109,7 +109,7 @@ main(int argc, char *argv[]) {
 		a, b, n,
 		n_threads, tids
 	);
-	gettimeofday(&start, NULL);
+	gettimeofday(&end, NULL);
 	long time = tv_to_usec(end) - tv_to_usec(start);
 
 	printf("%f\n", integral);
